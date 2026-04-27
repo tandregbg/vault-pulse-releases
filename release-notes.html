@@ -58,6 +58,17 @@ hr { border: none; border-top: 1px solid var(--rule); margin: 22px 0; }</style>
 </head>
 <body>
 <h1>Changelog</h1>
+<h2>1.5.2 — 2026-04-27</h2>
+<h3>Changed</h3>
+<ul>
+<li><strong>Today / Recent now use modification time by default</strong> (CR-002). Previously these sections used filesystem creation time, which made files synced from another Mac (iCloud, Dropbox) appear missing -- the original creation date carries over from the source machine and never matches today on the receiving Mac. Modification time tracks &quot;what did I touch today?&quot; honestly and survives sync.</li>
+<li>New Settings option (&quot;Today / Recent uses:&quot;) with three values: <strong>Modified date</strong> (default), <strong>Created date</strong> (old behaviour), or <strong>Either</strong>. Switch under Cmd+, if the new default does not match how you think about your work.</li>
+<li>Search panel result list also shows the chosen date, so what you sort by matches what you see.</li>
+</ul>
+<h3>Migration</h3>
+<ul>
+<li>Pre-1.5.2 configs without the new field auto-resolve to &quot;Modified&quot;. To restore the old behaviour explicitly, open Settings and pick <strong>Created date</strong>.</li>
+</ul>
 <h2>1.5.1 — 2026-04-26</h2>
 <h3>Added</h3>
 <ul>
